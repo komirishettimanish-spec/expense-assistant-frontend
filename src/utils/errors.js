@@ -15,7 +15,7 @@ export function getErrorMessage(error, fallback = 'Something went wrong. Please 
   if (!error) return fallback;
   if (!error.response) {
     if (error.code === 'ECONNABORTED') return 'The request timed out. Please try again.';
-    return 'Cannot reach the server. Make sure the backend is running on http://localhost:8080.';
+    return 'Cannot reach the server. Please try again in a moment.';
   }
   const { status, data } = error.response;
   if (data && typeof data.message === 'string' && data.message.trim()) {
