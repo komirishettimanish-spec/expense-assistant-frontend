@@ -2,8 +2,10 @@ import axios from 'axios';
 
 export const TOKEN_KEY = 'ea_token';
 
+const BACKEND_URL = 'https://expense-assistant-backend-q0tm.onrender.com/api';
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://expense-assistant-backend-q0tm.onrender.com/api',
+  baseURL: BACKEND_URL,
   timeout: 60000,
 });
 
